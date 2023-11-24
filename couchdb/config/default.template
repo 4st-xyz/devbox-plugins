@@ -1,0 +1,8 @@
+[couchdb]
+database_dir = $COUCHDB_DATA
+view_index_dir = $COUCHDB_DATA
+default_security = everyone
+single_node = true
+
+[chttpd]
+bind_address = 127.0.0.1

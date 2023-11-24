@@ -1,0 +1,11 @@
+{
+  "name": "mailpit",
+  "version": "0.0.1",
+  "readme": "Mailpit is a small, fast, low memory, zero-dependency, multi-platform email testing tool & API for developers",
+  "env": {
+    "MAILPIT_ARGS": ""
+  },
+  "create_files": {
+    "{{ .Virtenv }}/process-compose.yaml": "config/process-compose.yaml"
+  }
+}

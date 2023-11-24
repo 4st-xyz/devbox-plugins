@@ -1,0 +1,9 @@
+version: "0.5"
+
+processes:
+  mailpit:
+    command: |
+      mailpit $MAILPIT_ARGS
+    availability:
+      restart: on_failure
+      max_restarts: 5

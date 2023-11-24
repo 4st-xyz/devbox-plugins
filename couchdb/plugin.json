@@ -1,0 +1,16 @@
+{
+  "name": "couchdb3",
+  "version": "0.0.1",
+  "readme": "",
+  "env": {
+    "COUCHDB_DATA": "{{ .Virtenv }}/data",
+    "COUCHDB_VIRTENV": "{{ .Virtenv }}",
+    "COUCHDB_INI_FILES": "{{ .Virtenv }}/default.ini {{ .DevboxDir }}/local.ini",
+    "xROOTDIR": "{{ .Virtenv }}"
+  },
+  "create_files": {
+    "{{ .DevboxDir }}/local.ini": "config/local.ini",
+    "{{ .Virtenv }}/default.template": "config/default.template",
+    "{{ .Virtenv }}/process-compose.yaml": "config/process-compose.yaml"
+  }
+}

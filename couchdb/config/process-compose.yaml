@@ -1,0 +1,10 @@
+version: "0.5"
+
+processes:
+  couchdb3:
+    command: |
+      if [ -f $COUCHDB_VIRTENV/default.template ]; then envsubst $(awk 'BEGIN {for (k in ENVIRON) {printf "$"k","}}') < $COUCHDB_VIRTENV/default.template > $COUCHDB_VIRTENV/default.ini; fi
+      couchdb
+    availability:
+      restart: on_failure
+      max_restarts: 5
